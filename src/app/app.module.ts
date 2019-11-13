@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FilmsListComponent } from './films-list/films-list.component';
+import { FilmsListComponent } from './components/films-list/films-list.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -12,9 +13,10 @@ import { FilmsListComponent } from './films-list/films-list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [],
-  bootstrap: [FilmsListComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

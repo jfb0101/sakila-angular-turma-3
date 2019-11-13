@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Film } from '../types/Film';
+import { Film } from '../../types/Film';
+import { FilmService } from 'src/app/services/film-service.service';
 
 @Component({
   selector: 'app-films-list',
@@ -8,20 +9,12 @@ import { Film } from '../types/Film';
 })
 export class FilmsListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private filmService:FilmService) { }
 
   private filmsList:Film[] = []
 
-  ngOnInit() {
-
-    this.filmsList.push({
-      filmId: 1, title: 'Harry Potter', releaseYear: 2017
-    })
-
-    this.filmsList.push({
-      filmId: 2, title: 'Logan', releaseYear: 2018
-    })
-
+  async ngOnInit() {
+    this.filmsList = await this.filmService.listAll()
   }
 
 }
