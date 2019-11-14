@@ -25,7 +25,7 @@ export class FilmService {
         film).toPromise()
     } else {
       await this.http.post(`${API_URL}/Films`,
-        film)
+        film).toPromise()
     }
   }
 }
