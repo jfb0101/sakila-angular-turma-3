@@ -17,7 +17,16 @@
 
     <div class="form-group">
         <label for="">Language</label>
-        <select name="language" [(ngModel)]="film.languageId"  class="form-control"></select>
+        <select name="language" 
+            [(ngModel)]="film.languageId"  
+            class="form-control">
+            <option 
+                *ngFor="let language of languageList"
+                [value]="language.languageId">
+                {{language.name}}
+            </option>
+        </select>
+
     </div>
 
     <button (click)="save()" class="btn btn-primary">

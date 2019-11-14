@@ -19,7 +19,13 @@ export class FilmService {
     return response.json()
   }
 
-  async saveOrUpdate() {
-
+  async saveOrUpdate(film:Film) {
+    if (film.filmId != null) {
+      await this.http.patch(`${API_URL}/Films/${film.filmId}`,
+        film).toPromise()
+    } else {
+      await this.http.post(`${API_URL}/Films`,
+        film)
+    }
   }
 }
