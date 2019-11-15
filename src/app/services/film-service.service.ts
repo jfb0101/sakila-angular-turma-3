@@ -28,4 +28,14 @@ export class FilmService {
         film).toPromise()
     }
   }
+
+  async get(filmId:number):Promise<Film> {
+
+    const response = await this.http
+      .get(`${API_URL}/Films/${filmId}`).toPromise()
+    
+    return response.json()
+
+    
+  }
 }

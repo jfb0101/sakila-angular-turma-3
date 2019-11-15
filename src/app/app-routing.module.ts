@@ -7,6 +7,8 @@ const routes: Routes = [
   {path: '', component: FilmsListComponent},
   {path: 'films',component: FilmsListComponent},
   {path: 'create-edit-film', 
+    component: CreateEditFilmComponent},
+  {path:'create-edit-film/:filmIdToEdit',
     component: CreateEditFilmComponent}
 ];
 
