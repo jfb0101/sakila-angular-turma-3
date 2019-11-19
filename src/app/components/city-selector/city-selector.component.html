@@ -1,0 +1,34 @@
+<form action="">
+    <div class="form-group">
+        <label for="">Country</label>
+        
+        <select 
+            name="country" 
+            class="form-control" 
+            (change)="updateCityList()" 
+            [(ngModel)]="countryIdSelected">
+
+            <option *ngFor="let country of countryList" 
+            [value]="country.countryId">
+                {{country.country}}
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="form-group">
+        <label for="">City</label>
+        <select 
+            name="city" 
+            [(ngModel)]="cityIdSelected" 
+            class="form-control"
+            (change)="onCitySelected()"
+            >
+            <option *ngFor="let city of cityList" 
+            [value]="city.cityId">
+                {{city.city}}
+            </option>
+        </select>
+    </div>
+</form>

@@ -1,3 +1,3 @@
-const API_URL = 'http://192.168.15.41:3000/api'
+const API_URL = 'http://adamantio.com.br:4040/api'
 
 export default API_URL

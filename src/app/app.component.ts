@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sakila-angular EDITADO';
+
+  citySelected(cityId:number) {
+    console.log(`cidade selecionada: ${cityId}`)
+  }
 }
