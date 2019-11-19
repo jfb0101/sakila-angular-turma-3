@@ -8,13 +8,15 @@ import { HttpModule } from '@angular/http';
 import { CreateEditFilmComponent } from './components/create-edit-film/create-edit-film.component';
 import { FormsModule } from "@angular/forms";
 import { CitySelectorComponent } from './components/city-selector/city-selector.component';
+import { CreateEditCustomerComponent } from './components/create-edit-customer/create-edit-customer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmsListComponent,
     CreateEditFilmComponent,
-    CitySelectorComponent
+    CitySelectorComponent,
+    CreateEditCustomerComponent
   ],
   imports: [
     BrowserModule,

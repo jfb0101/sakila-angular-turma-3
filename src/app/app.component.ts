@@ -6,9 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sakila-angular EDITADO';
+  title = 'sakila-angular';
 
-  citySelected(cityId:number) {
-    console.log(`cidade selecionada: ${cityId}`)
-  }
 }
